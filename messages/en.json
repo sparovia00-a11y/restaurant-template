@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "menu": "Menu",
+    "story": "Story",
+    "gallery": "Gallery",
+    "reservations": "Reservations",
+    "reserve": "Reserve a table",
+    "kitchen": "Kitchen",
+    "contact": "Contact"
+  },
+  "sections": {
+    "aboutUs": "About Us",
+    "ourPhilosophy": "Our Philosophy",
+    "featuredMenu": "Featured Menu",
+    "gallery": "Gallery",
+    "chefStory": "Our Chef",
+    "testimonials": "What Guests Say",
+    "reservations": "Reservations",
+    "location": "Location & Contact",
+    "awardsEyebrow": "Awards",
+    "awardsTitle": "Recognized for Excellence",
+    "testimonialsEyebrow": "Guest Stories",
+    "testimonialsTitle": "What Our Guests Say"
+  },
+  "common": {
+    "viewDish": "View dish",
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "discover": "Discover"
+  },
+  "footer": {
+    "newsletterPlaceholder": "Your email",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved."
+  },
+  "location": {
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "hoursLabel": "Hours"
+  },
+  "gallery": {
+    "eyebrow": "03",
+    "title": "The Art of the Table",
+    "description": "A visual journey through our ingredients, craft, and moments that inspire everything we do.",
+    "enter": "Enter the Exhibition",
+    "discover": "Discover",
+    "scroll": "Scroll to Explore",
+    "ctaEyebrow": "The Experience",
+    "ctaTitle": "Some Moments Are Meant to Be Tasted."
+  },
+  "menuPage": {
+    "heroTitle": "Our Menu",
+    "heroSubtitle": "A seasonal selection built around what the market gives us — each dish with its own story, told in full on its own page.",
+    "viewDish": "View Dish"
+  },
+  "storyPage": {
+    "eyebrow": "Our Story",
+    "beginning": "How We Began",
+    "philosophyRecap": "What Guides Us",
+    "awardsRecap": "Along the Way",
+    "dishesTitle": "The Dishes Behind the Menu",
+    "dishesSubtitle": "Where each one comes from, how it's made, and why it's on the table.",
+    "videoTitle": "Inside the Kitchen",
+    "videoSubtitle": "A longer look at how a night at the restaurant comes together, start to finish."
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "subtitle": "Questions, private events, or press — we'd love to hear from you.",
+    "nameLabel": "Full name",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "send": "Send Message",
+    "sent": "Message sent!",
+    "sentSubtitle": "We'll get back to you shortly."
+  },
+  "dishPage": {
+    "discoverDish": "Discover the dish",
+    "theDish": "The Dish",
+    "theComposition": "The Composition",
+    "theCraft": "The Craft",
+    "fromTheChef": "From the Chef",
+    "perfectPairing": "Perfect Pairing",
+    "glass": "Glass",
+    "bottle": "Bottle",
+    "moreOfThisDish": "More of This Dish",
+    "experienceTitle": "Experience It at the Table",
+    "experienceSubtitle": "Available as part of our à la carte menu."
+  },
+  "reservationsPage": {
+    "fullName": "Full name",
+    "email": "Email",
+    "partySize": "Party size",
+    "sending": "Sending...",
+    "requestSent": "Request sent!",
+    "confirmShortly": "We'll confirm your reservation shortly."
+  }
+}

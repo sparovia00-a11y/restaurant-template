@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "menu": "Menú",
+    "story": "Historia",
+    "gallery": "Galería",
+    "reservations": "Reservaciones",
+    "reserve": "Reservar mesa",
+    "kitchen": "Cocina",
+    "contact": "Contacto"
+  },
+  "sections": {
+    "aboutUs": "Sobre Nosotros",
+    "ourPhilosophy": "Nuestra Filosofía",
+    "featuredMenu": "Menú Destacado",
+    "gallery": "Galería",
+    "chefStory": "Nuestro Chef",
+    "testimonials": "Lo Que Dicen Nuestros Clientes",
+    "reservations": "Reservaciones",
+    "location": "Ubicación y Contacto",
+    "awardsEyebrow": "Premios",
+    "awardsTitle": "Reconocidos por Excelencia",
+    "testimonialsEyebrow": "Historias de Huéspedes",
+    "testimonialsTitle": "Lo Que Dicen Nuestros Clientes"
+  },
+  "common": {
+    "viewDish": "Ver plato",
+    "learnMore": "Conocer más",
+    "readMore": "Leer más",
+    "discover": "Descubrir"
+  },
+  "footer": {
+    "newsletterPlaceholder": "Tu correo",
+    "subscribe": "Suscribirme",
+    "rights": "Todos los derechos reservados."
+  },
+  "location": {
+    "addressLabel": "Dirección",
+    "phoneLabel": "Teléfono",
+    "hoursLabel": "Horario"
+  },
+  "gallery": {
+    "eyebrow": "03",
+    "title": "El Arte de la Mesa",
+    "description": "Un recorrido visual por nuestros ingredientes, oficio y los momentos que inspiran todo lo que hacemos.",
+    "enter": "Entrar a la Exhibición",
+    "discover": "Descubrir",
+    "scroll": "Desliza para Explorar",
+    "ctaEyebrow": "La Experiencia",
+    "ctaTitle": "Algunos Momentos Están Hechos para Saborearse."
+  },
+  "menuPage": {
+    "heroTitle": "Nuestro Menú",
+    "heroSubtitle": "Una selección de temporada construida alrededor de lo que nos da el mercado — cada plato con su propia historia, contada por completo en su propia página.",
+    "viewDish": "Ver Plato"
+  },
+  "storyPage": {
+    "eyebrow": "Nuestra Historia",
+    "beginning": "Cómo Empezamos",
+    "philosophyRecap": "Lo Que Nos Guía",
+    "awardsRecap": "En el Camino",
+    "dishesTitle": "Los Platos Detrás del Menú",
+    "dishesSubtitle": "De dónde viene cada uno, cómo se hace, y por qué está en la mesa.",
+    "videoTitle": "Dentro de la Cocina",
+    "videoSubtitle": "Una mirada más larga a cómo se arma una noche en el restaurante, de principio a fin."
+  },
+  "contactPage": {
+    "title": "Contáctanos",
+    "subtitle": "Preguntas, eventos privados o prensa — nos encantaría saber de ti.",
+    "nameLabel": "Nombre completo",
+    "emailLabel": "Correo",
+    "messageLabel": "Mensaje",
+    "send": "Enviar Mensaje",
+    "sent": "¡Mensaje enviado!",
+    "sentSubtitle": "Te responderemos pronto."
+  },
+  "dishPage": {
+    "discoverDish": "Descubre el plato",
+    "theDish": "El Plato",
+    "theComposition": "La Composición",
+    "theCraft": "El Proceso",
+    "fromTheChef": "Del Chef",
+    "perfectPairing": "Maridaje Perfecto",
+    "glass": "Copa",
+    "bottle": "Botella",
+    "moreOfThisDish": "Más de Este Plato",
+    "experienceTitle": "Vívelo en la Mesa",
+    "experienceSubtitle": "Disponible como parte de nuestro menú a la carta."
+  },
+  "reservationsPage": {
+    "fullName": "Nombre completo",
+    "email": "Correo",
+    "partySize": "Número de personas",
+    "sending": "Enviando...",
+    "requestSent": "¡Solicitud enviada!",
+    "confirmShortly": "Te confirmaremos la reservación pronto."
+  }
+}

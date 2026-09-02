@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "menu": "Menu",
+    "story": "Storia",
+    "gallery": "Galleria",
+    "reservations": "Prenotazioni",
+    "reserve": "Prenota un tavolo",
+    "kitchen": "Cucina",
+    "contact": "Contatti"
+  },
+  "sections": {
+    "aboutUs": "Chi Siamo",
+    "ourPhilosophy": "La Nostra Filosofia",
+    "featuredMenu": "Menu in Evidenza",
+    "gallery": "Galleria",
+    "chefStory": "Il Nostro Chef",
+    "testimonials": "Cosa Dicono i Nostri Ospiti",
+    "reservations": "Prenotazioni",
+    "location": "Dove Siamo e Contatti",
+    "awardsEyebrow": "Premi",
+    "awardsTitle": "Riconosciuti per l'Eccellenza",
+    "testimonialsEyebrow": "Storie degli Ospiti",
+    "testimonialsTitle": "Cosa Dicono i Nostri Ospiti"
+  },
+  "common": {
+    "viewDish": "Vedi piatto",
+    "learnMore": "Scopri di più",
+    "readMore": "Leggi di più",
+    "discover": "Scopri"
+  },
+  "footer": {
+    "newsletterPlaceholder": "La tua email",
+    "subscribe": "Iscriviti",
+    "rights": "Tutti i diritti riservati."
+  },
+  "location": {
+    "addressLabel": "Indirizzo",
+    "phoneLabel": "Telefono",
+    "hoursLabel": "Orario"
+  },
+  "gallery": {
+    "eyebrow": "03",
+    "title": "L'Arte della Tavola",
+    "description": "Un viaggio visivo tra i nostri ingredienti, il nostro mestiere e i momenti che ispirano tutto ciò che facciamo.",
+    "enter": "Entra nella Mostra",
+    "discover": "Scopri",
+    "scroll": "Scorri per Esplorare",
+    "ctaEyebrow": "L'Esperienza",
+    "ctaTitle": "Alcuni Momenti Sono Fatti per Essere Assaporati."
+  },
+  "menuPage": {
+    "heroTitle": "Il Nostro Menu",
+    "heroSubtitle": "Una selezione stagionale costruita attorno a ciò che ci offre il mercato — ogni piatto con la propria storia, raccontata per intero nella sua pagina.",
+    "viewDish": "Vedi Piatto"
+  },
+  "storyPage": {
+    "eyebrow": "La Nostra Storia",
+    "beginning": "Come Siamo Iniziati",
+    "philosophyRecap": "Cosa Ci Guida",
+    "awardsRecap": "Lungo il Cammino",
+    "dishesTitle": "I Piatti Dietro il Menu",
+    "dishesSubtitle": "Da dove viene ognuno, come si prepara e perché è in tavola.",
+    "videoTitle": "Dentro la Cucina",
+    "videoSubtitle": "Uno sguardo più approfondito su come si costruisce una serata al ristorante, dall'inizio alla fine."
+  },
+  "contactPage": {
+    "title": "Contattaci",
+    "subtitle": "Domande, eventi privati o stampa — ci farebbe piacere sentirti.",
+    "nameLabel": "Nome completo",
+    "emailLabel": "Email",
+    "messageLabel": "Messaggio",
+    "send": "Invia Messaggio",
+    "sent": "Messaggio inviato!",
+    "sentSubtitle": "Ti risponderemo a breve."
+  },
+  "dishPage": {
+    "discoverDish": "Scopri il piatto",
+    "theDish": "Il Piatto",
+    "theComposition": "La Composizione",
+    "theCraft": "Il Processo",
+    "fromTheChef": "Dallo Chef",
+    "perfectPairing": "Abbinamento Perfetto",
+    "glass": "Calice",
+    "bottle": "Bottiglia",
+    "moreOfThisDish": "Altre Immagini del Piatto",
+    "experienceTitle": "Vivilo al Tavolo",
+    "experienceSubtitle": "Disponibile come parte del nostro menu à la carte."
+  },
+  "reservationsPage": {
+    "fullName": "Nome completo",
+    "email": "Email",
+    "partySize": "Numero di persone",
+    "sending": "Invio...",
+    "requestSent": "Richiesta inviata!",
+    "confirmShortly": "Confermeremo la tua prenotazione a breve."
+  }
+}

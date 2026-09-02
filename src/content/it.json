@@ -1,0 +1,582 @@
+{
+  "restaurantName": "Nome del Ristorante",
+  "hero": {
+    "tagline": "Un viaggio di sapori tra il fuoco, il mare e la stagione.",
+    "backgroundImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80"
+  },
+  "aboutUs": {
+    "text": "Da oltre un decennio, la nostra cucina attinge da acque locali e tranquille fattorie di montagna per costruire una tavola che sembra al tempo stesso antica e nuova. Ogni piatto porta una storia che merita di essere assaporata con calma.",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80"
+  },
+  "ourPhilosophy": {
+    "intro": "Crediamo che un pasto sia un atto di fiducia tra la cucina e l'ospite. Tutto qui — il menu, il bancone, la sala privata — esiste per onorare questo.",
+    "cards": [
+      {
+        "id": "kitchen",
+        "title": "La Cucina",
+        "teaser": "Dove ogni piatto prende forma, portata dopo portata, sera dopo sera.",
+        "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=700&q=80"
+      },
+      {
+        "id": "dining-room",
+        "title": "La Sala",
+        "teaser": "Pensata per lunghe conversazioni e serate lente, senza fretta.",
+        "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80"
+      },
+      {
+        "id": "private-room",
+        "title": "La Sala Privata",
+        "teaser": "Uno spazio più riservato per le cene che ne hanno bisogno.",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80"
+      },
+      {
+        "id": "our-food",
+        "title": "La Nostra Cucina",
+        "teaser": "Stagionale, precisa, mai più protagonista dell'ingrediente stesso.",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80"
+      }
+    ]
+  },
+  "featuredMenu": {
+    "dishes": [
+      {
+        "id": "dish-1",
+        "name": "Polpo alla Brace",
+        "shortDescription": "Paprika affumicata, patate confit, olio di limone.",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
+        "category": "Primo · Profondità del Mare",
+        "price": "$28",
+        "tagline": "Piatto Signature",
+        "fullDescription": "Un'interpretazione delicata del mare, che bilancia la dolcezza naturale del polpo con una nota affumicata e la freschezza degli agrumi.",
+        "composition": [
+          {
+            "id": "dish-1-c0",
+            "name": "Polpo",
+            "descriptor": "Tenero · affumicato · marino",
+            "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=500&q=80"
+          },
+          {
+            "id": "dish-1-c1",
+            "name": "Patate Confit",
+            "descriptor": "Setose · burrose · lente",
+            "image": "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=500&q=80"
+          },
+          {
+            "id": "dish-1-c2",
+            "name": "Paprika Affumicata",
+            "descriptor": "Terrosa · calda · profonda",
+            "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=500&q=80"
+          },
+          {
+            "id": "dish-1-c3",
+            "name": "Olio di Limone",
+            "descriptor": "Brillante · deciso · fresco",
+            "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=500&q=80"
+          }
+        ],
+        "craftSteps": [
+          {
+            "number": "01",
+            "text": "Polpo ammorbidito e grigliato a fuoco vivo."
+          },
+          {
+            "number": "02",
+            "text": "Patate confit cotte lentamente nell'olio d'oliva."
+          },
+          {
+            "number": "03",
+            "text": "Paprika affumicata scaldata per rilasciare i suoi oli."
+          },
+          {
+            "number": "04",
+            "text": "Finito al tavolo con un filo di olio di limone."
+          }
+        ],
+        "chefQuote": "La grigliatura deve essere onesta — niente scorciatoie, niente cannello. Solo fuoco e pazienza.",
+        "winePairing": {
+          "name": "Albariño",
+          "origin": "Spagna · Rías Baixas",
+          "glassPrice": "$16",
+          "bottlePrice": "$62",
+          "backgroundImage": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800&q=80"
+        },
+        "chefPhoto": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900&q=80",
+        "heroVideo": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      },
+      {
+        "id": "dish-2",
+        "name": "Petto d'Anatra",
+        "shortDescription": "Gastrique alla ciliegia, verdure di radice arrostite.",
+        "image": "https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=600&q=80",
+        "category": "Selezione dello Chef",
+        "price": "$85",
+        "tagline": "Selezione dello Chef",
+        "fullDescription": "Uno studio sull'intensità: petto d'anatra cotto lentamente, finito con un gastrique alla ciliegia che taglia il grasso con l'acidità giusta.",
+        "composition": [
+          {
+            "id": "dish-2-c0",
+            "name": "Petto d'Anatra",
+            "descriptor": "Ricco · dorato · rosato",
+            "image": "https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=500&q=80"
+          },
+          {
+            "id": "dish-2-c1",
+            "name": "Gastrique alla Ciliegia",
+            "descriptor": "Acidulo · lucido · profondo",
+            "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=500&q=80"
+          },
+          {
+            "id": "dish-2-c2",
+            "name": "Verdure di Radice",
+            "descriptor": "Arrostite · terrose · dolci",
+            "image": "https://images.unsplash.com/photo-1518492104633-130d0cc84637?w=500&q=80"
+          }
+        ],
+        "craftSteps": [
+          {
+            "number": "01",
+            "text": "Anatra incisa e rosolata dal lato della pelle fino a diventare croccante."
+          },
+          {
+            "number": "02",
+            "text": "Gastrique ridotto da ciliegie, aceto e zucchero."
+          },
+          {
+            "number": "03",
+            "text": "Radici arrostite intere, divise al tavolo."
+          },
+          {
+            "number": "04",
+            "text": "Riposata cinque minuti prima del primo taglio."
+          }
+        ],
+        "chefQuote": "L'anatra premia la pazienza. Se affretti la rosolatura perdi tutto il senso del piatto.",
+        "winePairing": {
+          "name": "Pinot Noir",
+          "origin": "Francia · Borgogna",
+          "glassPrice": "$22",
+          "bottlePrice": "$88",
+          "backgroundImage": "https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&q=80"
+        },
+        "chefPhoto": "https://images.unsplash.com/photo-1583394293214-28a5b0a25ba9?w=900&q=80",
+        "heroVideo": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      },
+      {
+        "id": "dish-3",
+        "name": "Risotto ai Funghi Porcini",
+        "shortDescription": "Parmigiano stagionato, tartufo nero, timo.",
+        "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600&q=80",
+        "category": "Speciale Vegetariano",
+        "price": "$52",
+        "tagline": "Speciale Vegetariano",
+        "fullDescription": "Riso Carnaroli cotto lentamente in brodo ricco, finito al tavolo con tartufo nero a lamelle e Parmigiano Reggiano stagionato 36 mesi.",
+        "composition": [
+          {
+            "id": "dish-3-c0",
+            "name": "Riso Carnaroli",
+            "descriptor": "Cremoso · al dente · paziente",
+            "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=500&q=80"
+          },
+          {
+            "id": "dish-3-c1",
+            "name": "Tartufo Nero",
+            "descriptor": "Terroso · intenso · raro",
+            "image": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=500&q=80"
+          },
+          {
+            "id": "dish-3-c2",
+            "name": "Parmigiano Stagionato",
+            "descriptor": "Sapido · deciso · 36 mesi",
+            "image": "https://images.unsplash.com/photo-1452195100486-9cc805987862?w=500&q=80"
+          }
+        ],
+        "craftSteps": [
+          {
+            "number": "01",
+            "text": "Riso tostato a secco prima del primo mestolo di brodo."
+          },
+          {
+            "number": "02",
+            "text": "Brodo aggiunto gradualmente, mescolando senza sosta."
+          },
+          {
+            "number": "03",
+            "text": "Burro e formaggio incorporati fuori dal fuoco."
+          },
+          {
+            "number": "04",
+            "text": "Tartufo affettato solo al tavolo, mai prima."
+          }
+        ],
+        "chefQuote": "Il risotto non ha vie di fuga. Si sente esattamente quanta attenzione ha ricevuto.",
+        "winePairing": {
+          "name": "Chardonnay",
+          "origin": "Italia · Piemonte",
+          "glassPrice": "$18",
+          "bottlePrice": "$70",
+          "backgroundImage": "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=800&q=80"
+        },
+        "chefPhoto": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900&q=80",
+        "heroVideo": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+      },
+      {
+        "id": "dish-4",
+        "name": "Capesante Scottate",
+        "shortDescription": "Purea di cavolfiore, burro nocciola, capperi.",
+        "image": "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&q=80",
+        "category": "Selezione dello Chef",
+        "price": "$34",
+        "tagline": "Selezione dello Chef",
+        "fullDescription": "Capesante scottate a fuoco vivo, su una purea di cavolfiore frullata fino a renderla setosa, finite con burro nocciola e capperi.",
+        "composition": [
+          {
+            "id": "dish-4-c0",
+            "name": "Capesante",
+            "descriptor": "Dolci · delicate · marine",
+            "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=80"
+          },
+          {
+            "id": "dish-4-c1",
+            "name": "Purea di Cavolfiore",
+            "descriptor": "Cremosa · terrosa · sottile",
+            "image": "https://images.unsplash.com/photo-1518492104633-130d0cc84637?w=500&q=80"
+          },
+          {
+            "id": "dish-4-c2",
+            "name": "Burro Nocciola",
+            "descriptor": "Nocciolato · aromatico · intenso",
+            "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=500&q=80"
+          },
+          {
+            "id": "dish-4-c3",
+            "name": "Capperi",
+            "descriptor": "Sapidi · decisi · piccoli",
+            "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&q=80"
+          }
+        ],
+        "craftSteps": [
+          {
+            "number": "01",
+            "text": "Capesante scottate trenta secondi per lato, non di più."
+          },
+          {
+            "number": "02",
+            "text": "Cavolfiore sbollentato e poi frullato fino a renderlo setoso."
+          },
+          {
+            "number": "03",
+            "text": "Burro rosolato lentamente finché non profuma di nocciola."
+          },
+          {
+            "number": "04",
+            "text": "Capperi croccanti nella stessa padella, fuori dal fuoco."
+          }
+        ],
+        "chefQuote": "Trenta secondi in più e perdi la capesante del tutto. Il tempo è tutto il piatto.",
+        "winePairing": {
+          "name": "Chablis Premier Cru",
+          "origin": "Francia · Borgogna",
+          "glassPrice": "$24",
+          "bottlePrice": "$110",
+          "backgroundImage": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80"
+        },
+        "chefPhoto": "https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=900&q=80",
+        "heroVideo": ""
+      },
+      {
+        "id": "dish-5",
+        "name": "Carré d'Agnello",
+        "shortDescription": "Crosta di erbe, jus al vino rosso, verdure di stagione.",
+        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
+        "category": "Selezione dello Chef",
+        "price": "$46",
+        "tagline": "Selezione dello Chef",
+        "fullDescription": "Carré d'agnello con crosta di erbe, servito con un jus al vino rosso accanto a verdure raccolte quella stessa mattina al mercato.",
+        "composition": [
+          {
+            "id": "dish-5-c0",
+            "name": "Carré d'Agnello",
+            "descriptor": "Tenero · rosato · da pascolo",
+            "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80"
+          },
+          {
+            "id": "dish-5-c1",
+            "name": "Crosta di Erbe",
+            "descriptor": "Profumata · tostata · verde",
+            "image": "https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=500&q=80"
+          },
+          {
+            "id": "dish-5-c2",
+            "name": "Jus al Vino Rosso",
+            "descriptor": "Profondo · lucido · ridotto",
+            "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500&q=80"
+          },
+          {
+            "id": "dish-5-c3",
+            "name": "Verdure di Stagione",
+            "descriptor": "Fresche · croccanti · dal mercato",
+            "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&q=80"
+          }
+        ],
+        "craftSteps": [
+          {
+            "number": "01",
+            "text": "Agnello rosolato e poi ricoperto con erbe fresche."
+          },
+          {
+            "number": "02",
+            "text": "Arrostito fino a una cottura rosata precisa."
+          },
+          {
+            "number": "03",
+            "text": "Jus ridotto dagli scarti per quattro ore."
+          },
+          {
+            "number": "04",
+            "text": "Riposato sotto la carta stagnola prima del primo taglio."
+          }
+        ],
+        "chefQuote": "Il carré d'agnello non perdona. Due minuti in più e diventa un altro piatto.",
+        "winePairing": {
+          "name": "Cabernet Sauvignon",
+          "origin": "USA · Napa Valley",
+          "glassPrice": "$20",
+          "bottlePrice": "$85",
+          "backgroundImage": "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=800&q=80"
+        },
+        "chefPhoto": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900&q=80",
+        "heroVideo": ""
+      },
+      {
+        "id": "dish-6",
+        "name": "Tortino al Cioccolato",
+        "shortDescription": "Caramello salato, gelato alla vaniglia.",
+        "image": "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=600&q=80",
+        "category": "Finale Dolce",
+        "price": "$16",
+        "tagline": "Finale Dolce",
+        "fullDescription": "Un tortino al cioccolato fondente dal cuore fondente, finito con caramello salato e una pallina di gelato alla vaniglia che inizia a sciogliersi.",
+        "composition": [
+          {
+            "id": "dish-6-c0",
+            "name": "Cioccolato Fondente",
+            "descriptor": "Amaro · intenso · fondente",
+            "image": "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=500&q=80"
+          },
+          {
+            "id": "dish-6-c1",
+            "name": "Caramello Salato",
+            "descriptor": "Dolce · salato · lucido",
+            "image": "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=500&q=80"
+          },
+          {
+            "id": "dish-6-c2",
+            "name": "Gelato alla Vaniglia",
+            "descriptor": "Freddo · cremoso · profumato",
+            "image": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=500&q=80"
+          }
+        ],
+        "craftSteps": [
+          {
+            "number": "01",
+            "text": "Impasto versato negli stampini, raffreddato fino al servizio."
+          },
+          {
+            "number": "02",
+            "text": "Cotto esattamente nove minuti, non uno di più."
+          },
+          {
+            "number": "03",
+            "text": "Sformato ancora fondente al centro."
+          },
+          {
+            "number": "04",
+            "text": "Finito al tavolo con caramello e gelato."
+          }
+        ],
+        "chefQuote": "Nove minuti, non dieci. Tutto il dessert si gioca in quel minuto.",
+        "winePairing": {
+          "name": "Porto Tawny",
+          "origin": "Portogallo · Douro",
+          "glassPrice": "$14",
+          "bottlePrice": "$58",
+          "backgroundImage": "https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=800&q=80"
+        },
+        "chefPhoto": "https://images.unsplash.com/photo-1583394293214-28a5b0a25ba9?w=900&q=80",
+        "heroVideo": ""
+      }
+    ]
+  },
+  "gallery": {
+    "exhibitionTitle": "Una Mostra Visiva",
+    "exhibitionSubtitle": "Un viaggio nella nostra cucina, nel nostro spazio e nei momenti che ci ispirano.",
+    "heroImage": "https://images.unsplash.com/photo-1544025162-d76694265947?w=1400&q=80",
+    "previewImages": [
+      "https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80",
+      "https://images.unsplash.com/photo-1583394293214-28a5b0a25ba9?w=700&q=80"
+    ],
+    "sections": [
+      {
+        "number": "01",
+        "title": "L'Ingrediente",
+        "tagline": "Dove ogni storia inizia.",
+        "images": [
+          "https://images.unsplash.com/photo-1518110925495-7a1b57cb0f34?w=900&q=80",
+          "https://images.unsplash.com/photo-1594057687713-5fd14eed1c17?w=900&q=80"
+        ]
+      },
+      {
+        "number": "02",
+        "title": "Il Mestiere",
+        "tagline": "La precisione è un ingrediente.",
+        "images": [
+          "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900&q=80"
+        ]
+      },
+      {
+        "number": "03",
+        "title": "Il Piatto",
+        "tagline": "Composizione in equilibrio.",
+        "images": [
+          "https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=80"
+        ]
+      },
+      {
+        "number": "04",
+        "title": "Lo Spazio",
+        "tagline": "Pensato per conversazioni, celebrazioni e ricordi.",
+        "images": [
+          "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80",
+          "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80",
+          "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=700&q=80"
+        ]
+      },
+      {
+        "number": "05",
+        "title": "Le Persone",
+        "tagline": "Ogni piatto inizia con una persona.",
+        "images": [
+          "https://images.unsplash.com/photo-1583394293214-28a5b0a25ba9?w=500&q=80",
+          "https://images.unsplash.com/photo-1595257841889-8b0e1b6b3f00?w=500&q=80",
+          "https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=500&q=80",
+          "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&q=80"
+        ]
+      },
+      {
+        "number": "06",
+        "title": "I Momenti",
+        "tagline": "I dettagli. Le emozioni. I ricordi.",
+        "images": [
+          "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=500&q=80",
+          "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80",
+          "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=500&q=80",
+          "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&q=80"
+        ]
+      }
+    ],
+    "ctaImage": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80"
+  },
+  "chefStory": {
+    "chefName": "Chef Marco Ellis",
+    "text": "Marco si è formato in cucine costiere prima di tornare a casa per costruire un menu attorno agli ingredienti con cui è cresciuto. La sua cucina è discreta, precisa, e non mette mai in mostra più di quanto il prodotto meriti.",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900&q=80"
+  },
+  "testimonials": [
+    {
+      "id": "t1",
+      "quote": "Un'esperienza che trasforma il tuo rapporto con il cibo. Ogni portata del menu Omakase sembrava una rivelazione.",
+      "author": "Eater",
+      "source": "Press",
+      "role": "Direttrice Brand e Creatività"
+    },
+    {
+      "id": "t2",
+      "quote": "Il nostro anniversario al Privé è stato indimenticabile. Attenzione impeccabile ai dettagli.",
+      "author": "The Local Table",
+      "source": "Press",
+      "role": "Imprenditore"
+    },
+    {
+      "id": "t3",
+      "quote": "Ho cenato in ristoranti stellati Michelin in tutta Europa, e questo regge il confronto.",
+      "author": "J. Alvarez",
+      "source": "Guest",
+      "role": "Giornalista Gastronomica"
+    },
+    {
+      "id": "t4",
+      "quote": "Il Chef's Table vale ogni euro in più. Esci sentendo di aver fatto parte della cucina.",
+      "author": "Daniel W.",
+      "source": "Guest",
+      "role": "Ingegnere Software"
+    },
+    {
+      "id": "t5",
+      "quote": "Il miglior menu degustazione della città in questo momento, senza dubbio. Prenotate l'Omakase.",
+      "author": "Priya N.",
+      "source": "Press",
+      "role": "Blog di Cibo e Viaggi"
+    },
+    {
+      "id": "t6",
+      "quote": "Abbiamo usato il Privé per una piccola cena di gruppo e per una sera è sembrato il nostro ristorante personale.",
+      "author": "M. Fontaine",
+      "source": "Guest",
+      "role": "Direttrice Marketing"
+    }
+  ],
+  "reservations": {
+    "text": "I tavoli sono limitati ogni sera per mantenere la sala tranquilla. Consigliamo di prenotare con almeno una settimana di anticipo per i weekend.",
+    "hours": "Mar–Dom, 17:30 – 22:30",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80"
+  },
+  "location": {
+    "address": "Via del Porto 128, La Tua Città",
+    "phone": "+1 (555) 012-3456",
+    "hours": "Mar–Dom · 17:30 – 22:30 · Chiuso il lunedì"
+  },
+  "footer": {
+    "instagram": "https://instagram.com",
+    "facebook": "https://facebook.com",
+    "newsletterText": "Iscriviti per aggiornamenti sul menu stagionale e inviti a eventi privati."
+  },
+  "kitchen": {
+    "intro": "The kitchen behind the dining room.",
+    "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=900&q=80",
+    "teamText": "Six cooks, one pastry chef, and a dishwasher named Tito who has been here longer than anyone. Most of the team trained together and moved up from the same line.",
+    "ingredientsText": "Produce comes from three farms within two hours of the restaurant. Fish arrives daily from the same boat we've bought from for six years. Nothing frozen unless the menu says so."
+  },
+  "awards": [
+    {
+      "id": "michelin",
+      "label": "Guida Michelin",
+      "icon": "star"
+    },
+    {
+      "id": "worlds50",
+      "label": "World's 50 Best",
+      "icon": "clock"
+    },
+    {
+      "id": "vogue",
+      "label": "Vogue Table",
+      "icon": "heart"
+    },
+    {
+      "id": "bonappetit",
+      "label": "Bon Appétit",
+      "icon": "star"
+    },
+    {
+      "id": "ellegourmet",
+      "label": "Elle Gourmet",
+      "icon": "home"
+    },
+    {
+      "id": "culinaria",
+      "label": "Culinaria Awards",
+      "icon": "award"
+    }
+  ]
+}
