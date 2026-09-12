@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { getContent } from "@/content/store";
+import { getGoogleReviews } from "@/lib/googleReviews";
 import type { Locale } from "@/i18n/routing";
 import { Star, Clock, Heart, Home as HomeIcon, Award, MapPin, Phone } from "lucide-react";
 import RevealOnScroll from "@/components/RevealOnScroll";
@@ -13,6 +14,7 @@ export default async function Home({
   const { locale } = await params;
   const t = await getTranslations({ locale });
   const content = await getContent(locale as Locale);
+  const googleReviews = await getGoogleReviews(locale);
 
   return (
     <main>
@@ -228,40 +230,80 @@ export default async function Home({
         </div>
       </section>
 
-      {/* Testimonios: tarjetas beige con estrellas y avatar */}
-      <section
-        className="px-6 md:px-16 py-20 text-center"
-      >
-        <p className="text-xs uppercase tracking-[0.2em] text-amber-700/70 mb-3">
-          {t("sections.testimonialsEyebrow")}
-        </p>
-        <h2 className="font-serif text-3xl mb-14">
-          {t("sections.testimonialsTitle")}
-        </h2>
-        <RevealOnScroll className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 px-1 max-w-6xl mx-auto scroll-smooth [&::-webkit-scrollbar]:hidden">
-          {content.testimonials.map((item) => (
-            <div
-              key={item.id}
-              className="text-left p-8 border shrink-0 snap-start w-[85%] sm:w-[360px]"
-              style={{ backgroundColor: "#F2EDE3", borderColor: "#E5DCC9" }}
-            >
-              <div className="text-amber-600 mb-4 text-sm">★★★★★</div>
-              <p className="font-serif italic text-neutral-800 leading-relaxed mb-6">
-                &ldquo;{item.quote}&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-amber-200/60 flex items-center justify-center font-serif text-amber-800">
-                  {item.author.charAt(0)}
+      {/* Reseñas: rating y comentarios reales traídos de Google, tarjetas beige con estrellas y avatar */}
+      {googleReviews && googleReviews.reviews.length > 0 && (
+        <section className="px-6 md:px-16 py-20 text-center">
+          <p className="text-xs uppercase tracking-[0.2em] text-amber-700/70 mb-3">
+            {t("sections.testimonialsEyebrow")}
+          </p>
+          <h2 className="font-serif text-3xl mb-4">
+            {t("sections.testimonialsTitle")}
+          </h2>
+          <div className="flex items-center justify-center gap-2 mb-14">
+            <div className="text-amber-600 flex">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star
+                  key={i}
+                  size={16}
+                  fill={i < Math.round(googleReviews.rating) ? "currentColor" : "none"}
+                />
+              ))}
+            </div>
+            <span className="text-sm text-neutral-600">
+              {t("sections.basedOnReviews", { count: googleReviews.totalReviews })}
+            </span>
+          </div>
+          <RevealOnScroll className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 px-1 max-w-6xl mx-auto scroll-smooth [&::-webkit-scrollbar]:hidden">
+            {googleReviews.reviews.map((item) => (
+              <div
+                key={item.id}
+                className="text-left p-8 border shrink-0 snap-start w-[85%] sm:w-[360px]"
+                style={{ backgroundColor: "#F2EDE3", borderColor: "#E5DCC9" }}
+              >
+                <div className="text-amber-600 mb-4 flex">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      size={14}
+                      fill={i < item.rating ? "currentColor" : "none"}
+                    />
+                  ))}
                 </div>
-                <div>
-                  <p className="text-sm font-medium">{item.author}</p>
-                  <p className="text-xs text-neutral-500">{item.role}</p>
+                <p className="font-serif italic text-neutral-800 leading-relaxed mb-6 line-clamp-6">
+                  &ldquo;{item.text}&rdquo;
+                </p>
+                <div className="flex items-center gap-3">
+                  {item.authorPhoto ? (
+                    <img
+                      src={item.authorPhoto}
+                      alt=""
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-10 h-10 rounded-full bg-amber-200/60 flex items-center justify-center font-serif text-amber-800">
+                      {item.author.charAt(0)}
+                    </div>
+                  )}
+                  <div>
+                    <p className="text-sm font-medium">{item.author}</p>
+                    <p className="text-xs text-neutral-500">{item.relativeTime}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </RevealOnScroll>
-      </section>
+            ))}
+          </RevealOnScroll>
+          {googleReviews.mapsUri && (
+            <a
+              href={googleReviews.mapsUri}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-10 text-xs uppercase tracking-wide underline underline-offset-4 text-neutral-600 hover:text-neutral-900"
+            >
+              {t("sections.viewOnGoogle")}
+            </a>
+          )}
+        </section>
+      )}
       {/* Reservaciones: CTA fuerte con horarios */}
       <section className="grid md:grid-cols-2 gap-0">
         <RevealOnScroll>

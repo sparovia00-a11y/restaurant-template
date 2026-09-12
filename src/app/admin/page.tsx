@@ -11,9 +11,9 @@ type ReservationEntry = Record<string, string> & { receivedAt: string };
 export default function AdminPage() {
   const [key, setKey] = useState("");
   const [unlocked, setUnlocked] = useState(false);
-  const [view, setView] = useState<"content" | "reservations" | "notifications">(
-    "content"
-  );
+  const [view, setView] = useState<
+    "content" | "reservations" | "notifications" | "googleReviews"
+  >("content");
   const [locale, setLocale] = useState<(typeof LOCALES)[number]>("en");
   const [content, setContent] = useState<SiteContent | null>(null);
   const [branding, setBranding] = useState<Branding | null>(null);
@@ -107,12 +107,22 @@ export default function AdminPage() {
           >
             Notificaciones
           </button>
+          <button
+            onClick={() => setView("googleReviews")}
+            className={`px-4 py-2 text-sm rounded-sm border ${
+              view === "googleReviews" ? "bg-neutral-900 text-white" : "bg-white"
+            }`}
+          >
+            Reseñas de Google
+          </button>
         </div>
 
         {view === "reservations" ? (
           <ReservationsView adminKey={key} />
         ) : view === "notifications" ? (
           <NotificationSettingsView adminKey={key} />
+        ) : view === "googleReviews" ? (
+          <GoogleReviewsSettingsView adminKey={key} />
         ) : (
           <>
         <h1 className="font-serif text-2xl mb-8">Editar contenido</h1>
@@ -453,47 +463,18 @@ export default function AdminPage() {
           ))}
         </Section>
 
-        <Section title="Testimonios">
-          {content.testimonials.map((item, i) => (
-            <div key={item.id} className="border-t pt-4 mt-4">
-              <TextArea
-                label="Cita"
-                value={item.quote}
-                onChange={(v) => {
-                  const testimonials = [...content.testimonials];
-                  testimonials[i] = { ...item, quote: v };
-                  setContent({ ...content, testimonials });
-                }}
-              />
-              <Field
-                label="Autor"
-                value={item.author}
-                onChange={(v) => {
-                  const testimonials = [...content.testimonials];
-                  testimonials[i] = { ...item, author: v };
-                  setContent({ ...content, testimonials });
-                }}
-              />
-              <Field
-                label="Rol / cargo"
-                value={item.role}
-                onChange={(v) => {
-                  const testimonials = [...content.testimonials];
-                  testimonials[i] = { ...item, role: v };
-                  setContent({ ...content, testimonials });
-                }}
-              />
-              <Field
-                label="Fuente"
-                value={item.source}
-                onChange={(v) => {
-                  const testimonials = [...content.testimonials];
-                  testimonials[i] = { ...item, source: v };
-                  setContent({ ...content, testimonials });
-                }}
-              />
-            </div>
-          ))}
+        <Section title="Reseñas">
+          <p className="text-sm text-neutral-500">
+            Esta sección ahora se llena automáticamente con reseñas reales de
+            Google. Configúralas en la pestaña{" "}
+            <button
+              onClick={() => setView("googleReviews")}
+              className="underline underline-offset-2"
+            >
+              Reseñas de Google
+            </button>
+            .
+          </p>
         </Section>
 
         <Section title="Reservaciones">
@@ -713,6 +694,95 @@ function NotificationSettingsView({ adminKey }: { adminKey: string }) {
           {hasKey
             ? "Ya hay una key guardada — solo se muestran sus últimos caracteres. Escribe una nueva para reemplazarla."
             : "Consíguela gratis en resend.com y pégala aquí."}
+        </p>
+
+        <div className="flex items-center gap-4">
+          <button
+            onClick={save}
+            className="bg-neutral-900 text-white px-5 py-2 text-sm rounded-sm"
+          >
+            Guardar
+          </button>
+          {status && <span className="text-sm text-neutral-600">{status}</span>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function GoogleReviewsSettingsView({ adminKey }: { adminKey: string }) {
+  const [placeId, setPlaceId] = useState("");
+  const [apiKey, setApiKey] = useState("");
+  const [hasKey, setHasKey] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [status, setStatus] = useState<string | null>(null);
+
+  async function load() {
+    setError(null);
+    const res = await fetch("/api/google-reviews-settings", {
+      headers: { "x-admin-key": adminKey },
+    });
+    if (!res.ok) {
+      setError("No se pudo cargar (revisa la contraseña).");
+      setLoading(false);
+      return;
+    }
+    const data = await res.json();
+    setPlaceId(data.placeId);
+    setApiKey(data.apiKey);
+    setHasKey(data.hasKey);
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  async function save() {
+    setStatus("Guardando...");
+    const res = await fetch("/api/google-reviews-settings", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-admin-key": adminKey },
+      body: JSON.stringify({ apiKey, placeId }),
+    });
+    if (res.ok) {
+      setStatus("Guardado ✓");
+      load(); // re-fetch so the key shows masked again
+    } else {
+      setStatus("Error al guardar");
+    }
+  }
+
+  if (loading) return <p className="text-sm text-neutral-500">Cargando...</p>;
+
+  return (
+    <div>
+      <h1 className="font-serif text-2xl mb-2">Reseñas de Google</h1>
+      <p className="text-sm text-neutral-500 mb-6">
+        La sección de reseñas del sitio se llena automáticamente con la
+        calificación real y los comentarios más recientes de Google, en vez
+        de textos escritos a mano.
+      </p>
+
+      {error && <p className="text-sm text-red-600 mb-4">{error}</p>}
+
+      <div className="bg-white p-6 rounded-sm shadow-sm max-w-md">
+        <Field
+          label="Google Place ID del restaurante"
+          value={placeId}
+          onChange={setPlaceId}
+        />
+        <p className="text-xs text-neutral-400 -mt-3 mb-4">
+          Búscalo con la herramienta &ldquo;Find your Place ID&rdquo; de
+          Google (developers.google.com/maps/documentation/places/web-service/place-id).
+        </p>
+        <Field label="Google API Key" value={apiKey} onChange={setApiKey} />
+        <p className="text-xs text-neutral-400 -mt-3 mb-4">
+          {hasKey
+            ? "Ya hay una key guardada — solo se muestran sus últimos caracteres. Escribe una nueva para reemplazarla."
+            : "Créala en Google Cloud Console y habilita ahí la \"Places API (New)\"."}
         </p>
 
         <div className="flex items-center gap-4">

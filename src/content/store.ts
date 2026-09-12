@@ -162,3 +162,44 @@ export async function saveNotificationSettings(settings: NotificationSettings) {
     "utf-8"
   );
 }
+
+export type GoogleReviewsSettings = {
+  apiKey: string;
+  placeId: string;
+};
+
+function googleReviewsSettingsPath() {
+  return path.join(process.cwd(), "src", "content", "google-reviews-settings.json");
+}
+
+// Per-restaurant config for pulling real Google reviews into the
+// testimonials section. Each deployment configures its own API key +
+// Place ID from the admin — no env vars needed.
+export async function getGoogleReviewsSettings(): Promise<GoogleReviewsSettings | null> {
+  if (hasRedis) {
+    const redis = await getRedis();
+    const stored = await redis.get<GoogleReviewsSettings>(
+      "content:google-reviews-settings"
+    );
+    return stored ?? null;
+  }
+  try {
+    const raw = await fs.readFile(googleReviewsSettingsPath(), "utf-8");
+    return JSON.parse(raw) as GoogleReviewsSettings;
+  } catch {
+    return null;
+  }
+}
+
+export async function saveGoogleReviewsSettings(settings: GoogleReviewsSettings) {
+  if (hasRedis) {
+    const redis = await getRedis();
+    await redis.set("content:google-reviews-settings", settings);
+    return;
+  }
+  await fs.writeFile(
+    googleReviewsSettingsPath(),
+    JSON.stringify(settings, null, 2),
+    "utf-8"
+  );
+}

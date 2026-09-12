@@ -20,7 +20,9 @@
     "awardsEyebrow": "Awards",
     "awardsTitle": "Recognized for Excellence",
     "testimonialsEyebrow": "Guest Stories",
-    "testimonialsTitle": "What Our Guests Say"
+    "testimonialsTitle": "What Our Guests Say",
+    "basedOnReviews": "Based on {count} Google reviews",
+    "viewOnGoogle": "View all reviews on Google"
   },
   "common": {
     "viewDish": "View dish",

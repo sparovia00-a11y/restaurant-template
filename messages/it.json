@@ -20,7 +20,9 @@
     "awardsEyebrow": "Premi",
     "awardsTitle": "Riconosciuti per l'Eccellenza",
     "testimonialsEyebrow": "Storie degli Ospiti",
-    "testimonialsTitle": "Cosa Dicono i Nostri Ospiti"
+    "testimonialsTitle": "Cosa Dicono i Nostri Ospiti",
+    "basedOnReviews": "Basato su {count} recensioni di Google",
+    "viewOnGoogle": "Vedi tutte le recensioni su Google"
   },
   "common": {
     "viewDish": "Vedi piatto",
