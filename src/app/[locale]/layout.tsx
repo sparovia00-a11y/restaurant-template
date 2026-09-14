@@ -21,9 +21,21 @@ export default async function LocaleLayout({
     notFound();
   }
   const branding = await getBranding();
+  const { accent, background, surface, textPrimary, textMuted } = branding.colors;
 
   return (
     <NextIntlClientProvider>
+      {/* Overrides the default palette in globals.css with this
+          restaurant's saved colors. A <style> tag targeting :root applies
+          to the whole document regardless of where it's rendered in the
+          tree, but /admin (outside this layout) never renders it, so the
+          admin panel's own look stays fixed no matter what a restaurant
+          picks here. */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `:root{--color-accent:${accent};--color-background:${background};--color-surface:${surface};--color-text-primary:${textPrimary};--color-text-muted:${textMuted};}`,
+        }}
+      />
       <Navbar
         locale={locale}
         restaurantName={branding.restaurantName}

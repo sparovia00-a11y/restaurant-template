@@ -23,7 +23,7 @@ export default async function GalleryPage({
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent" />
         <div className="relative px-6 md:px-16 pt-32 pb-16 md:pb-24 max-w-lg animate-fade-up">
-          <p className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: "#B08A5A" }}>
+          <p className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: "var(--color-accent)" }}>
             {t("sections.gallery")}
           </p>
           <h1 className="font-serif text-4xl md:text-6xl leading-tight mb-6">
@@ -61,7 +61,7 @@ export default async function GalleryPage({
               }`}
             >
               <RevealOnScroll delay={100}>
-                <p className="font-serif text-2xl md:text-3xl mb-2" style={{ color: "#B08A5A" }}>
+                <p className="font-serif text-2xl md:text-3xl mb-2" style={{ color: "var(--color-accent)" }}>
                   {section.number} —
                 </p>
                 <h2 className="font-serif text-2xl md:text-3xl mb-3">{section.title}</h2>
@@ -76,7 +76,7 @@ export default async function GalleryPage({
                   className={`inline-flex items-center gap-2 text-xs uppercase tracking-wide ${
                     textOnLeft ? "" : "flex-row-reverse"
                   }`}
-                  style={{ color: "#B08A5A" }}
+                  style={{ color: "var(--color-accent)" }}
                 >
                   {t("gallery.discover")} →
                 </a>
@@ -106,7 +106,7 @@ export default async function GalleryPage({
           </div>
           <div className="p-8 md:p-10 flex flex-col justify-center" style={{ backgroundColor: "#1A1816" }}>
             <RevealOnScroll>
-              <p className="font-serif text-2xl mb-2" style={{ color: "#B08A5A" }}>
+              <p className="font-serif text-2xl mb-2" style={{ color: "var(--color-accent)" }}>
                 {section.number} —
               </p>
               <h2 className="font-serif text-xl mb-3">{section.title}</h2>
@@ -119,7 +119,7 @@ export default async function GalleryPage({
               <a
                 href={`/${locale}/gallery`}
                 className="inline-flex items-center gap-2 text-xs uppercase tracking-wide"
-                style={{ color: "#B08A5A" }}
+                style={{ color: "var(--color-accent)" }}
               >
                 {t("gallery.discover")} →
               </a>
@@ -135,7 +135,7 @@ export default async function GalleryPage({
       >
         <div className="absolute inset-0 bg-black/70" />
         <RevealOnScroll className="relative">
-          <p className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: "#B08A5A" }}>
+          <p className="text-xs uppercase tracking-[0.25em] mb-4" style={{ color: "var(--color-accent)" }}>
             {t("gallery.ctaEyebrow")}
           </p>
           <h2 className="font-serif text-3xl md:text-4xl mb-10 max-w-xl mx-auto leading-snug">
@@ -143,8 +143,8 @@ export default async function GalleryPage({
           </h2>
           <a
             href={`/${locale}/reservations`}
-            className="inline-flex items-center gap-2 border px-6 py-3 text-xs uppercase tracking-wide hover:bg-white hover:text-neutral-900 transition-colors"
-            style={{ borderColor: "#B08A5A", color: "#B08A5A" }}
+            className="inline-flex items-center gap-2 border px-6 py-3 text-xs uppercase tracking-wide hover:bg-white hover:text-[var(--color-text-primary)] transition-colors"
+            style={{ borderColor: "var(--color-accent)", color: "var(--color-accent)" }}
           >
             {t("nav.reserve")} →
           </a>

@@ -5,7 +5,14 @@ import type { SiteContent } from "@/content/schema";
 
 const LOCALES = ["en", "es", "pt", "it"] as const;
 
-type Branding = { restaurantName: string; logoUrl: string };
+type ThemeColors = {
+  accent: string;
+  background: string;
+  surface: string;
+  textPrimary: string;
+  textMuted: string;
+};
+type Branding = { restaurantName: string; logoUrl: string; colors: ThemeColors };
 type ReservationEntry = Record<string, string> & { receivedAt: string };
 
 export default function AdminPage() {
@@ -143,6 +150,49 @@ export default function AdminPage() {
               value={branding.logoUrl}
               onChange={(v) => setBranding({ ...branding, logoUrl: v })}
             />
+
+            <h3 className="font-serif text-base mt-6 mb-1">Colores</h3>
+            <p className="text-xs text-neutral-500 mb-4">
+              Se aplican en todo el sitio (no afectan a este panel de admin).
+            </p>
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              <ColorField
+                label="Acento (detalles, íconos, links)"
+                value={branding.colors.accent}
+                onChange={(v) =>
+                  setBranding({ ...branding, colors: { ...branding.colors, accent: v } })
+                }
+              />
+              <ColorField
+                label="Fondo de página"
+                value={branding.colors.background}
+                onChange={(v) =>
+                  setBranding({ ...branding, colors: { ...branding.colors, background: v } })
+                }
+              />
+              <ColorField
+                label="Fondo de tarjetas"
+                value={branding.colors.surface}
+                onChange={(v) =>
+                  setBranding({ ...branding, colors: { ...branding.colors, surface: v } })
+                }
+              />
+              <ColorField
+                label="Texto principal"
+                value={branding.colors.textPrimary}
+                onChange={(v) =>
+                  setBranding({ ...branding, colors: { ...branding.colors, textPrimary: v } })
+                }
+              />
+              <ColorField
+                label="Texto secundario"
+                value={branding.colors.textMuted}
+                onChange={(v) =>
+                  setBranding({ ...branding, colors: { ...branding.colors, textMuted: v } })
+                }
+              />
+            </div>
+
             <div className="flex items-center gap-4">
               <button
                 onClick={saveBranding}
@@ -885,6 +935,35 @@ function Field({
         onChange={(e) => onChange(e.target.value)}
         className="w-full border px-3 py-2 rounded-sm text-sm"
       />
+    </label>
+  );
+}
+
+function ColorField({
+  label,
+  value,
+  onChange,
+}: {
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+}) {
+  return (
+    <label className="block mb-4">
+      <span className="block text-sm text-neutral-600 mb-1">{label}</span>
+      <div className="flex items-center gap-2">
+        <input
+          type="color"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          className="w-10 h-9 border rounded-sm cursor-pointer shrink-0"
+        />
+        <input
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          className="w-full border px-3 py-2 rounded-sm text-sm"
+        />
+      </div>
     </label>
   );
 }

@@ -5,11 +5,11 @@ import { getTranslations } from "next-intl/server";
 import ClickableImage from "@/components/ClickableImage";
 
 const ACCENTS: Record<string, string> = {
-  seafood: "#B08A5A",
+  seafood: "var(--color-accent)",
   meat: "#A2483A",
   vegetarian: "#6E7F5C",
   dessert: "#8C6A9C",
-  default: "#B08A5A",
+  default: "var(--color-accent)",
 };
 
 function accentFor(dishId: string) {
@@ -35,7 +35,7 @@ export default async function DishPage({
 
 
   return (
-    <main className="text-neutral-900">
+    <main className="text-[var(--color-text-primary)]">
       <section
         className="relative min-h-screen flex items-center bg-cover bg-center"
         style={{ backgroundImage: `url(${dish.image})` }}
@@ -68,7 +68,7 @@ export default async function DishPage({
       </section>
 
       <section className="my-10 md:my-16 grid md:grid-cols-2">
-        <div className="flex items-center p-10 md:p-24" style={{ backgroundColor: "#F2EDE3" }}>
+        <div className="flex items-center p-10 md:p-24" style={{ backgroundColor: "var(--color-surface)" }}>
           <div>
             <p className="text-xs uppercase tracking-[0.2em] mb-4" style={{ color: accent }}>
               {t("dishPage.theDish")}
@@ -123,7 +123,7 @@ export default async function DishPage({
       </section>
 
       <section className="my-10 md:my-16 grid md:grid-cols-2">
-        <div className="flex items-center p-10 md:p-24" style={{ backgroundColor: "#F2EDE3" }}>
+        <div className="flex items-center p-10 md:p-24" style={{ backgroundColor: "var(--color-surface)" }}>
           <div>
             <p className="text-xs uppercase tracking-[0.2em] mb-4" style={{ color: accent }}>
               {t("dishPage.fromTheChef")}
@@ -131,7 +131,7 @@ export default async function DishPage({
             <p className="font-serif italic text-xl leading-relaxed mb-4">
               &ldquo;{dish.chefQuote}&rdquo;
             </p>
-            <p className="text-sm text-neutral-500">— {content.chefStory.chefName}</p>
+            <p className="text-sm text-[var(--color-text-muted)]">— {content.chefStory.chefName}</p>
           </div>
         </div>
         <img
@@ -159,7 +159,7 @@ export default async function DishPage({
       </section>
 
       <section className="my-10 md:my-16 px-6 md:px-16 py-28 text-center">
-        <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-16">
+        <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] mb-16">
           {t("dishPage.moreOfThisDish")}
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -187,7 +187,7 @@ export default async function DishPage({
         </p>
         <a
           href={`/${locale}/reservations`}
-          className="inline-block border px-6 py-3 text-xs uppercase tracking-wide transition-colors hover:bg-white hover:text-neutral-900"
+          className="inline-block border px-6 py-3 text-xs uppercase tracking-wide transition-colors hover:bg-white hover:text-[var(--color-text-primary)]"
           style={{ borderColor: accent }}
         >
           {t("nav.reserve")}

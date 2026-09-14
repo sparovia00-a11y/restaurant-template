@@ -4,6 +4,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Paleta de marca por defecto — cada restaurante puede sobreescribir
+     estos valores desde el admin (pestaña "Colores"). Estos son solo el
+     fallback: se usan si aún no se ha guardado nada, y siguen aplicando
+     tal cual en /admin, que nunca hereda los colores del restaurante. */
+  --color-accent: #b08a5a;
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 30%, white);
+  --color-background: #faf6ef;
+  --color-surface: #f2ede3;
+  --color-surface-border: color-mix(in srgb, var(--color-surface) 85%, black);
+  --color-text-primary: #171717;
+  --color-text-muted: color-mix(in srgb, var(--color-text-primary) 55%, white);
 }
 
 @theme inline {

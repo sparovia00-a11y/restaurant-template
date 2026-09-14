@@ -43,7 +43,7 @@ function ReservationsForm({ locale }: { locale: string }) {
         <h1 className="font-serif text-3xl mb-4">
           {t("reservationsPage.requestSent")}
         </h1>
-        <p className="text-neutral-600">
+        <p className="text-[var(--color-text-muted)]">
           {t("reservationsPage.confirmShortly")}
         </p>
       </main>
@@ -55,8 +55,8 @@ function ReservationsForm({ locale }: { locale: string }) {
       <h1 className="font-serif text-3xl mb-4 text-center">
         {t("sections.reservations")}
       </h1>
-      <p className="text-center text-neutral-600 mb-2">{content.reservations.text}</p>
-      <p className="text-center text-sm uppercase tracking-wide text-neutral-500 mb-10">
+      <p className="text-center text-[var(--color-text-muted)] mb-2">{content.reservations.text}</p>
+      <p className="text-center text-sm uppercase tracking-wide text-[var(--color-text-muted)] mb-10">
         {content.reservations.hours}
       </p>
 
@@ -105,7 +105,7 @@ function ReservationsForm({ locale }: { locale: string }) {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="w-full bg-neutral-900 text-white py-3 text-xs uppercase tracking-wide disabled:opacity-50"
+          className="w-full bg-[var(--color-text-primary)] text-white py-3 text-xs uppercase tracking-wide disabled:opacity-50"
         >
           {status === "sending" ? t("reservationsPage.sending") : t("nav.reserve")}
         </button>

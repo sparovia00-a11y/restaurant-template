@@ -30,27 +30,52 @@ async function getRedis() {
   });
 }
 
+export type ThemeColors = {
+  accent: string;
+  background: string;
+  surface: string;
+  textPrimary: string;
+  textMuted: string;
+};
+
+export const DEFAULT_THEME_COLORS: ThemeColors = {
+  accent: "#b08a5a",
+  background: "#faf6ef",
+  surface: "#f2ede3",
+  textPrimary: "#171717",
+  textMuted: "#6b6259",
+};
+
 export type GlobalBranding = {
   restaurantName: string;
   logoUrl: string;
+  colors: ThemeColors;
 };
 
-// Name and logo are shared across every language (they're brand identity —
-// changing them in one language shouldn't require repeating the change in
-// the other three). Everything else in SiteContent stays fully independent
-// per locale, since a restaurant may want different photos/copy per market.
+// Name, logo and colors are shared across every language (they're brand
+// identity — changing them in one language shouldn't require repeating the
+// change in the other three). Everything else in SiteContent stays fully
+// independent per locale, since a restaurant may want different
+// photos/copy per market.
 async function getGlobalBranding(): Promise<GlobalBranding | null> {
   if (hasRedis) {
     const redis = await getRedis();
     const stored = await redis.get<GlobalBranding>("content:global");
-    return stored ?? null;
+    return stored ? withColorDefaults(stored) : null;
   }
   try {
     const raw = await fs.readFile(globalPath(), "utf-8");
-    return JSON.parse(raw) as GlobalBranding;
+    return withColorDefaults(JSON.parse(raw) as GlobalBranding);
   } catch {
     return null;
   }
+}
+
+// Restaurants that saved their branding before the color-theming feature
+// existed won't have a `colors` field yet — fill in the original look as
+// defaults so nothing changes for them until they visit the new tab.
+function withColorDefaults(branding: GlobalBranding): GlobalBranding {
+  return { ...branding, colors: { ...DEFAULT_THEME_COLORS, ...branding.colors } };
 }
 
 async function saveGlobalBranding(branding: GlobalBranding) {
@@ -69,7 +94,7 @@ export async function getBranding(): Promise<GlobalBranding> {
   // been saved globally yet.
   const raw = await fs.readFile(contentPath("en"), "utf-8");
   const en = JSON.parse(raw) as SiteContent;
-  return { restaurantName: en.restaurantName, logoUrl: "" };
+  return { restaurantName: en.restaurantName, logoUrl: "", colors: DEFAULT_THEME_COLORS };
 }
 
 export async function getContent(locale: Locale): Promise<SiteContent> {
@@ -103,6 +128,7 @@ export async function saveContent(locale: Locale, content: SiteContent) {
   await saveGlobalBranding({
     restaurantName: content.restaurantName,
     logoUrl: existing?.logoUrl ?? "",
+    colors: existing?.colors ?? DEFAULT_THEME_COLORS,
   });
 
   if (hasRedis) {

@@ -22,7 +22,7 @@ export default async function StoryPage({
       >
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative px-6 md:px-16 pb-14 text-white animate-fade-up">
-          <p className="text-xs uppercase tracking-[0.2em] mb-4 text-amber-300/80">
+          <p className="text-xs uppercase tracking-[0.2em] mb-4 text-[var(--color-accent)]/80">
             {t("storyPage.eyebrow")}
           </p>
           <h1 className="font-serif text-4xl md:text-6xl">
@@ -35,7 +35,7 @@ export default async function StoryPage({
       <section className="grid md:grid-cols-2 mt-16 md:mt-24">
         <RevealOnScroll className="flex items-center p-10 md:p-16 order-2 md:order-1">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-amber-700/70 mb-4">
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)]/70 mb-4">
               {t("storyPage.beginning")}
             </p>
             <TypewriterText
@@ -65,13 +65,13 @@ export default async function StoryPage({
         </RevealOnScroll>
         <RevealOnScroll delay={150} className="flex items-center p-10 md:p-16">
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-amber-700/70 mb-4">
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)]/70 mb-4">
               {t("sections.chefStory")}
             </p>
             <h2 className="font-serif text-2xl mb-2">{content.chefStory.chefName}</h2>
             <TypewriterText
               text={content.chefStory.text}
-              className="text-neutral-700 leading-relaxed"
+              className="text-[var(--color-text-muted)] leading-relaxed"
             />
           </div>
         </RevealOnScroll>
@@ -80,10 +80,10 @@ export default async function StoryPage({
       {/* Los platos detrás del menú */}
       <section className="px-6 md:px-16 py-20 mt-16 md:mt-24 text-center">
         <RevealOnScroll>
-          <p className="text-xs uppercase tracking-[0.2em] text-amber-700/70 mb-3">
+          <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)]/70 mb-3">
             {t("storyPage.dishesTitle")}
           </p>
-          <p className="max-w-xl mx-auto text-neutral-600 mb-14">
+          <p className="max-w-xl mx-auto text-[var(--color-text-muted)] mb-14">
             {t("storyPage.dishesSubtitle")}
           </p>
         </RevealOnScroll>
@@ -96,14 +96,14 @@ export default async function StoryPage({
                 className="w-28 h-28 object-cover rounded-sm shrink-0"
               />
               <div>
-                <p className="text-[11px] uppercase tracking-wide text-amber-700/70 mb-1">
+                <p className="text-[11px] uppercase tracking-wide text-[var(--color-accent)]/70 mb-1">
                   {dish.category}
                 </p>
                 <h3 className="font-serif text-lg mb-2">{dish.name}</h3>
                 <TypewriterText
                   text={dish.fullDescription}
                   as="p"
-                  className="text-sm text-neutral-600 leading-relaxed mb-2"
+                  className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-2"
                   wordDelay={20}
                 />
                 <a
@@ -121,7 +121,7 @@ export default async function StoryPage({
       {/* Video: recorrido más largo por la cocina */}
       <section className="px-6 md:px-16 py-20 text-center text-white" style={{ backgroundColor: "#1C1A17" }}>
         <RevealOnScroll>
-          <p className="text-xs uppercase tracking-[0.2em] text-amber-400/80 mb-3">
+          <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)]/80 mb-3">
             {t("storyPage.videoTitle")}
           </p>
           <TypewriterText
@@ -140,14 +140,14 @@ export default async function StoryPage({
       </section>
 
       {/* Lo que nos guía: recap de Our Philosophy */}
-      <section className="px-6 md:px-16 py-20 mt-16 md:mt-24 text-center" style={{ backgroundColor: "#F2EDE3" }}>
-        <p className="text-xs uppercase tracking-[0.2em] text-amber-700/70 mb-3">
+      <section className="px-6 md:px-16 py-20 mt-16 md:mt-24 text-center" style={{ backgroundColor: "var(--color-surface)" }}>
+        <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)]/70 mb-3">
           {t("storyPage.philosophyRecap")}
         </p>
         <h2 className="font-serif text-2xl mb-4">{t("sections.ourPhilosophy")}</h2>
         <TypewriterText
           text={content.ourPhilosophy.intro}
-          className="max-w-xl mx-auto text-neutral-700 mb-12"
+          className="max-w-xl mx-auto text-[var(--color-text-muted)] mb-12"
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
           {content.ourPhilosophy.cards.map((card, i) => (
@@ -168,13 +168,13 @@ export default async function StoryPage({
 
       {/* Reconocimientos */}
       <section className="px-6 md:px-16 py-20 text-center">
-        <p className="text-xs uppercase tracking-[0.2em] text-amber-700/70 mb-10">
+        <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)]/70 mb-10">
           {t("storyPage.awardsRecap")}
         </p>
         <div className="flex flex-wrap justify-center gap-x-10 gap-y-6">
           {content.awards.map((award, i) => (
             <RevealOnScroll key={award.id} delay={i * 80}>
-              <p className="text-sm uppercase tracking-wide text-neutral-500">
+              <p className="text-sm uppercase tracking-wide text-[var(--color-text-muted)]">
                 {award.label}
               </p>
             </RevealOnScroll>
@@ -188,7 +188,7 @@ export default async function StoryPage({
           <h2 className="font-serif text-2xl mb-8">{t("nav.reserve")}</h2>
           <a
             href={`/${locale}/reservations`}
-            className="inline-block border border-white px-6 py-3 text-xs uppercase tracking-wide hover:bg-white hover:text-neutral-900 transition-colors"
+            className="inline-block border border-white px-6 py-3 text-xs uppercase tracking-wide hover:bg-white hover:text-[var(--color-text-primary)] transition-colors"
           >
             {t("nav.reserve")} →
           </a>

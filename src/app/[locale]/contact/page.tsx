@@ -40,27 +40,27 @@ function ContactForm({ locale }: { locale: string }) {
   return (
     <main className="pt-32 pb-24 px-6 md:px-16 max-w-4xl mx-auto grid md:grid-cols-2 gap-16">
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-amber-700/70 mb-4">
+        <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)]/70 mb-4">
           {t("nav.contact")}
         </p>
         <h1 className="font-serif text-3xl mb-4">{t("contactPage.title")}</h1>
-        <p className="text-neutral-600 mb-10">{t("contactPage.subtitle")}</p>
+        <p className="text-[var(--color-text-muted)] mb-10">{t("contactPage.subtitle")}</p>
 
         <div className="space-y-6">
           <div>
-            <p className="text-xs uppercase tracking-wide text-neutral-500 mb-1">
+            <p className="text-xs uppercase tracking-wide text-[var(--color-text-muted)] mb-1">
               {t("location.addressLabel")}
             </p>
             <p>{content.location.address}</p>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-wide text-neutral-500 mb-1">
+            <p className="text-xs uppercase tracking-wide text-[var(--color-text-muted)] mb-1">
               {t("location.phoneLabel")}
             </p>
             <p>{content.location.phone}</p>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-wide text-neutral-500 mb-1">
+            <p className="text-xs uppercase tracking-wide text-[var(--color-text-muted)] mb-1">
               {t("location.hoursLabel")}
             </p>
             <p>{content.location.hours}</p>
@@ -70,9 +70,9 @@ function ContactForm({ locale }: { locale: string }) {
 
       <div>
         {status === "sent" ? (
-          <div className="p-8 border rounded-sm" style={{ backgroundColor: "#F2EDE3", borderColor: "#E5DCC9" }}>
+          <div className="p-8 border rounded-sm" style={{ backgroundColor: "var(--color-surface)", borderColor: "var(--color-surface-border)" }}>
             <h2 className="font-serif text-xl mb-2">{t("contactPage.sent")}</h2>
-            <p className="text-neutral-600 text-sm">{t("contactPage.sentSubtitle")}</p>
+            <p className="text-[var(--color-text-muted)] text-sm">{t("contactPage.sentSubtitle")}</p>
           </div>
         ) : (
           <form className="space-y-4" onSubmit={submit}>
@@ -103,7 +103,7 @@ function ContactForm({ locale }: { locale: string }) {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="w-full bg-neutral-900 text-white py-3 text-xs uppercase tracking-wide disabled:opacity-50"
+              className="w-full bg-[var(--color-text-primary)] text-white py-3 text-xs uppercase tracking-wide disabled:opacity-50"
             >
               {t("contactPage.send")}
             </button>

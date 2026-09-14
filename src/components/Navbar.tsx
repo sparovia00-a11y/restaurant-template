@@ -34,14 +34,14 @@ export default function Navbar({
 
   const isHome = pathname === "/";
   const solid = scrolled || !isHome;
-  const textColor = solid ? "text-neutral-900" : "text-white";
+  const textColor = solid ? "text-[var(--color-text-primary)]" : "text-white";
 
   return (
     <header
       className={`fixed top-0 inset-x-0 z-20 transition-colors duration-300 ${
         solid ? "shadow-sm" : ""
       }`}
-      style={{ backgroundColor: solid ? "#FAF6EF" : "transparent" }}
+      style={{ backgroundColor: solid ? "var(--color-background)" : "transparent" }}
     >
       <div className={`flex items-center justify-between px-6 md:px-12 py-5 ${textColor}`}>
         <Link href="/" className="flex items-center gap-2 font-serif text-lg tracking-wide">
@@ -66,8 +66,8 @@ export default function Navbar({
             href="/reservations"
             className={`border px-4 py-2 text-xs uppercase tracking-wide transition-colors ${
               solid
-                ? "border-neutral-900 hover:bg-neutral-900 hover:text-white"
-                : "border-white hover:bg-white hover:text-neutral-900"
+                ? "border-[var(--color-text-primary)] hover:bg-[var(--color-text-primary)] hover:text-white"
+                : "border-white hover:bg-white hover:text-[var(--color-text-primary)]"
             }`}
           >
             {t("reserve")}
@@ -84,9 +84,9 @@ export default function Navbar({
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
-          <span className={`h-px w-full ${solid ? "bg-neutral-900" : "bg-white"}`} />
-          <span className={`h-px w-full ${solid ? "bg-neutral-900" : "bg-white"}`} />
-          <span className={`h-px w-full ${solid ? "bg-neutral-900" : "bg-white"}`} />
+          <span className={`h-px w-full ${solid ? "bg-[var(--color-text-primary)]" : "bg-white"}`} />
+          <span className={`h-px w-full ${solid ? "bg-[var(--color-text-primary)]" : "bg-white"}`} />
+          <span className={`h-px w-full ${solid ? "bg-[var(--color-text-primary)]" : "bg-white"}`} />
         </button>
       </div>
 
@@ -100,7 +100,7 @@ export default function Navbar({
 
       {/* Mobile menu panel: slides in from the right */}
       <div
-        className={`md:hidden fixed top-0 right-0 h-full w-72 bg-neutral-900 text-white px-8 py-8 flex flex-col gap-6 z-40 transform transition-transform duration-300 ease-out ${
+        className={`md:hidden fixed top-0 right-0 h-full w-72 bg-[var(--color-text-primary)] text-white px-8 py-8 flex flex-col gap-6 z-40 transform transition-transform duration-300 ease-out ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
